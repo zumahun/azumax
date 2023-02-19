@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://zumahun.github.io/azumaxsitemap.xml
