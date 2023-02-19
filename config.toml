@@ -32,8 +32,8 @@ paginate = 20
 
 # SNS等のユーザー名
 [Params.widgets.social]
-  twitter = "uvrub"
-  github = "kato-k"
+  instagram = "azuma1225"
+  github = "zumahun"
 
 [Params.sidebar]
     home = "right"
