@@ -1,41 +1,19 @@
 ---
-title: "Sample Page"
-date: 2021-01-01
+title: "blog立ち上げ"
+date: 2021-02-19
 categories: ["hugo"]
 tags: ["markdown"]
 ---
 
-# HUGOのサンプル
+自分のやったことをどっかにまとめておきたいということで
+以下のサイトを参考にしてblogを作成してみました。
+[参考にしたサイト](https://zenn.dev/kato_k/articles/66531db0c4024d)
 
-https://zenn.dev/kato_k/articles/66531db0c4024d
 
-# h1
-## h2
-### h3
-#### h4
-##### h5
-###### h6
-<!-- menu: mainを使うとトップバーに固定される -->
+###### blogを作ることによって以下のことがわかったので最高です。
+- githubの使い方(ssh keyを登録するとめっちゃ楽)
+- blogは簡単に作れるということ
 
-- a
-  - b
-    - c
-    - d
-  - e
-- f
+これからちょくちょく更新できればと思います
 
-- `$ bash`
-- **BOLD**
-- *italic*
-- ~~44GG44KT44GT~~
 
-```c
-#include <stdio.h>
-
-int main() {
-  printf("Hello, World!\n");
-  return 0;
-}
-```
-
-{{<figure src="./image.jpeg" alt="モード" width="75%">}}
