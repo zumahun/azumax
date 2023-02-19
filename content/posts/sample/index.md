@@ -1,6 +1,6 @@
 ---
 title: "blog立ち上げ"
-date: 2021-02-19
+date: 2023-02-19
 categories: ["hugo"]
 tags: ["markdown"]
 ---
