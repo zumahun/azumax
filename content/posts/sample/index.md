@@ -2,11 +2,11 @@
 title: "Sample Page"
 date: 2021-01-01
 categories: ["hugo"]
-tags: ["go", "markdown"]
-menu: main
+tags: ["markdown"]
 ---
 
 # HUGOのサンプル
+[参考にしたサイト](https://zenn.dev/kato_k/articles/66531db0c4024d)
 
 # h1
 ## h2
