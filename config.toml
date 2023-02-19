@@ -7,16 +7,16 @@ HasCJKLanguage = true
 enableRobotsTXT = true
 
 # ブログのタイトル
-title = "hugo-blog-template"
+title = "FPGA enjoy joy joy!"
 
 theme = "mainroad"
 paginate = 20
 
 # 自己紹介
 [Author]
-    name = "Author"
-    bio = "ここに自己紹介を入れることができます"
-    avatar = "img/avatar.png"
+    name = "Kohei Azuma"
+    bio = "FPGA大好き少年です"
+    avatar = "img/avatar1.png"
 
 [Params]
     customCSS = ["css/custom.css"]
