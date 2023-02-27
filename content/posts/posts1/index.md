@@ -28,12 +28,12 @@ edge impluseのサイトにログインして、training、test用の画像を�
 ![basys3_training](basys3_training.png)
 
 
-撮影した画像にlabelingしていきます。今回は、Basys３を認識させたいので
-Basys3の写っている範囲を指定しています。
+撮影した画像にlabelingしていきます。今回は、Basys３を認識させたいので、Basys3の写っている範囲を指定しています。
+
 ![basys3_label](basys3_label.png)
 
-精度を確認したところ、50％ぐらいでした。今回はとりあえず動かしたかったので
-追加でtraining画像を増やしたりしませんでした。
+精度を確認したところ、50％ぐらいでした。今回はとりあえず動かしたかったので追加でtraining画像を増やしたりしませんでした。
+
 ![basys3_test](basys3_test.png)
 
 Kria KR260でedge impulseを実行した結果以下の図のように上手いことbasys3に
