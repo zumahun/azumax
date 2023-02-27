@@ -8,7 +8,7 @@
 <meta name=description content>
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Kria KR260とEdge Impluseを使ってBasys3を認識させる">
-<meta name=twitter:description content="このサイト を参考にして、自前のBasys3を学習させて、認識できるようにやってみた。 必要なもの、こと ・Kria KR260 x 1 ・USBカメラ(ロジクー">
+<meta name=twitter:description content="このサイト を参考にして、自前のBasys3を学習させて、認識できるようにやってみた。 必要なもの、こと Kria KR260 x 1 USBカメラ(ロジクールBRIO">
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <link rel=dns-prefetch href=//fonts.googleapis.com>
 <link rel=dns-prefetch href=//fonts.gstatic.com>
@@ -45,24 +45,30 @@
 </header><div class="content post__content clearfix">
 <p><a href=https://www.hackster.io/whitney-knitter/edge-impulse-on-kria-kr260-ed12bc>このサイト</a>
 を参考にして、自前のBasys3を学習させて、認識できるようにやってみた。</p>
-<p>必要なもの、こと
-・Kria KR260 x 1
-・USBカメラ(ロジクールBRIO) x 1
-・Edge Impluseのアカウント登録
-・MicroSDカード x 1</p>
-<p>AMDのサイトに行って、Kria KR260用のubuntuをダウンロードしてMicroSDカードに焼く。</p>
-<p>Kria KR260にMicroSDカードをさして、起動</p>
-<p>edge impluse用のパッケージをインストール</p>
-<p>edge impluseのサイトにログインして、training、test用の画像を撮影
-　全体で、41枚撮影して、training用に37枚、test用に4枚使いました。</p>
+<p>必要なもの、こと</p>
+<ul>
+<li>Kria KR260 x 1</li>
+<li>USBカメラ(ロジクールBRIO) x 1</li>
+<li>Edge Impluseのアカウント登録</li>
+<li>MicroSDカード x 1</li>
+</ul>
+<p>AMDのサイトに行って、Kria KR260用のubuntuをダウンロードしてMicroSDカードに焼く。
+<a href=https://www.xilinx.com/products/som/kria/kr260-robotics-starter-kit/kr260-getting-started/booting-your-starter-kit.html>https://www.xilinx.com/products/som/kria/kr260-robotics-starter-kit/kr260-getting-started/booting-your-starter-kit.html</a></p>
+<p>Kria KR260にMicroSDカードをさして、起動。</p>
+<p>edge impluse用のパッケージをインストール。</p>
+<p>edge impluseのサイトにログインして、training、test用の画像を撮影。
+　全体で、41枚撮影して、training用に37枚、test用に4枚使いました。
+<img src=basys3_training.png alt=basys3_training></p>
 <p>撮影した画像にlabelingしていきます。今回は、Basys３を認識させたいので
-Basys3の写っている範囲を指定しています。</p>
+Basys3の写っている範囲を指定しています。
+<img src=basys3_label.png alt=basys3_label></p>
 <p>精度を確認したところ、50％ぐらいでした。今回はとりあえず動かしたかったので
-追加でtraining画像を増やしたりしませんでした。</p>
+追加でtraining画像を増やしたりしませんでした。
+<img src=basys3_test.png alt=basys3_test></p>
 <p>Kria KR260でedge impulseを実行した結果以下の図のように上手いことbasys3に
 カメラを向けると認識してくれます。
-<img src=basys3_photo.png alt=basys3>
-今回は精度が50%でしたが、もっと良くするためにいろんな角度の画像を撮影した方がいいです。
+<img src=basys3_photo.png alt=basys3></p>
+<p>今回は精度が50%でしたが、もっと良くするためにいろんな角度の画像を撮影した方がいいです。
 （今回はほぼ正面の画像のみ）</p>
 </div>
 <footer class=post__footer>
