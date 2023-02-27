@@ -1,22 +1,20 @@
 <!doctype html><html class=no-js lang=ja>
 <head>
-<meta name=generator content="Hugo 0.86.1">
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<title>FPGA enjoy joy joy!</title>
+<title>Kria KR260とEdge Impluseを使ってBasys3を認識させる - FPGA enjoy joy joy!</title>
 <script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script>
 <meta name=description content>
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="FPGA enjoy joy joy!">
-<meta name=twitter:description content>
+<meta name=twitter:title content="Kria KR260とEdge Impluseを使ってBasys3を認識させる">
+<meta name=twitter:description content="このサイト を参考にして、自前のBasys3を学習させて、認識できるようにやってみた。 必要なもの、こと ・Kria KR260 x 1 ・USBカメラ(ロジクー">
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <link rel=dns-prefetch href=//fonts.googleapis.com>
 <link rel=dns-prefetch href=//fonts.gstatic.com>
 <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 <link rel=stylesheet href=/azumax/css/style.css>
 <link rel=stylesheet href=/azumax/css/custom.css>
-<link rel=alternate type=application/rss+xml href=/azumax/index.xml title="FPGA enjoy joy joy!">
 <link rel="shortcut icon" href=/azumax/favicon.ico>
 </head>
 <body class=body>
@@ -35,47 +33,60 @@
 </header>
 <div class="wrapper flex">
 <div class=primary>
-<main class="main list" role=main>
-<article class="list__item post">
-<header class=list__header>
-<h2 class="list__title post__title">
-<a href=/azumax/posts/posts1/ rel=bookmark>
-Kria KR260とEdge Impluseを使ってBasys3を認識させる
-</a>
-</h2>
-<div class="list__meta meta">
+<main class=main role=main>
+<article class=post>
+<header class=post__header>
+<h1 class=post__title>Kria KR260とEdge Impluseを使ってBasys3を認識させる</h1>
+<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 <svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2023-02-28T00:00:00Z>February 28, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class=meta__text><a class=meta__link href=/azumax/categories/kria-kr260/ rel=category>Kria KR260</a>, <a class=meta__link href=/azumax/categories/edge-impulse/ rel=category>edge impulse</a>
 </span>
 </div></div>
-</header>
-<div class="content list__excerpt post__content clearfix">
-このサイト を参考にして、自前のBasys3を学習させて、認識できるようにやってみた。 必要なもの、こと ・Kria KR260 x 1 ・USBカメラ(ロジクー
+</header><div class="content post__content clearfix">
+<p><a href=https://www.hackster.io/whitney-knitter/edge-impulse-on-kria-kr260-ed12bc>このサイト</a>
+を参考にして、自前のBasys3を学習させて、認識できるようにやってみた。</p>
+<p>必要なもの、こと
+・Kria KR260 x 1
+・USBカメラ(ロジクールBRIO) x 1
+・Edge Impluseのアカウント登録
+・MicroSDカード x 1</p>
+<p>AMDのサイトに行って、Kria KR260用のubuntuをダウンロードしてMicroSDカードに焼く。</p>
+<p>Kria KR260にMicroSDカードをさして、起動</p>
+<p>edge impluse用のパッケージをインストール</p>
+<p>edge impluseのサイトにログインして、training、test用の画像を撮影
+　全体で、41枚撮影して、training用に37枚、test用に4枚使いました。</p>
+<p>撮影した画像にlabelingしていきます。今回は、Basys３を認識させたいので
+Basys3の写っている範囲を指定しています。</p>
+<p>精度を確認したところ、50％ぐらいでした。今回はとりあえず動かしたかったので
+追加でtraining画像を増やしたりしませんでした。</p>
+<p>Kria KR260でedge impulseを実行した結果以下の図のように上手いことbasys3に
+カメラを向けると認識してくれます。
+<img src=basys3_photo.png alt=basys3>
+今回は精度が50%でしたが、もっと良くするためにいろんな角度の画像を撮影した方がいいです。
+（今回はほぼ正面の画像のみ）</p>
 </div>
-<div class="list__footer clearfix">
-<a class="list__footer-readmore btn" href=/azumax/posts/posts1/>続きを読む…</a>
+<footer class=post__footer>
+<div class="post__tags tags clearfix"><svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5.0 11V3C0 1.5.8.8.8.8S1.5.0 3 0h8c1.5.0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 100-6 3 3 0 000 6z"/></svg>
+<ul class=tags__list>
+<li class=tags__item>
+<a class="tags__link btn" href=/azumax/tags/markdown/ rel=tag>markdown</a>
+</li>
+</ul>
 </div>
-</article><article class="list__item post">
-<header class=list__header>
-<h2 class="list__title post__title">
-<a href=/azumax/posts/sample/ rel=bookmark>
-blog立ち上げ
-</a>
-</h2>
-<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2023-02-19T00:00:00Z>February 19, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class=meta__text><a class=meta__link href=/azumax/categories/hugo/ rel=category>hugo</a>
-</span>
-</div></div>
-</header>
-<div class="content list__excerpt post__content clearfix">
-自分のやったことをどっかにまとめておきたいということで 以下のサイトを参考にしてblogを作成してみました。 参考にしたサイト blogを作ること
-</div>
-<div class="list__footer clearfix">
-<a class="list__footer-readmore btn" href=/azumax/posts/sample/>続きを読む…</a>
-</div>
+</footer>
 </article>
 </main>
+<div class="authorbox clearfix">
+<figure class=authorbox__avatar>
+<img alt="Kohei Azuma avatar" src=/azumax/img/avatar1.png class=avatar height=90 width=90>
+</figure>
+<div class=authorbox__header>
+<span class=authorbox__name>Kohei Azumaについて</span>
+</div>
+<div class=authorbox__description>
+FPGA大好き少年です
+</div>
+</div>
 </div>
 <aside class=sidebar><div class="widget-search widget">
 <form class=widget-search__form role=search method=get action=https://google.com/search>
